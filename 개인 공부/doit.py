@@ -35,8 +35,13 @@
 # print(ave)
 
 # '''doit Q3'''
-pin = "000328-1068234"
-yyyymmdd = pin[:6]
-num = pin[7:]
-print(yyyymmdd)
-print(num)
+# pin = "000328-1068234"
+# yyyymmdd = pin[:6]
+# num = pin[7:]
+# print(yyyymmdd)
+# print(num)
+
+'''doit Q3'''
+a = "a:b:c:d"
+b = a.replace(":", "#")
+print(b)
