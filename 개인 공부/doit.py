@@ -31,13 +31,12 @@
 '''doit Q1'''
 # dic = {'국어': 80, '영어':75, '수학':55} 
 # a = dic['국어'] + dic['영어'] + dic['수학']
-# ave = a//3
+# ave = a
 # print(ave)
 
-'''doit Q2'''
+# '''doit Q3'''
 pin = "000328-1068234"
 yyyymmdd = pin[:6]
 num = pin[7:]
 print(yyyymmdd)
 print(num)
-
