@@ -41,7 +41,18 @@
 # print(yyyymmdd)
 # print(num)
 
-'''doit Q3'''
-a = "a:b:c:d"
-b = a.replace(":", "#")
-print(b)
+# '''doit Q3'''
+# a = "a:b:c:d"
+# b = a.replace(":", "#")
+# print(b)
+
+# '''doit Q4'''
+# a = [1, 3, 5, 4, 2]
+# a.sort()
+# a.reverse()
+# print(a)
+
+'''doit Q5'''
+a = ['Life', 'is', 'too', 'short']
+result = " ".join(a)
+print(result)
