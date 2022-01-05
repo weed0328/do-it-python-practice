@@ -52,7 +52,32 @@
 # a.reverse()
 # print(a)
 
-'''doit Q5'''
-a = ['Life', 'is', 'too', 'short']
-result = " ".join(a)
-print(result)
+# '''doit Q5'''
+# a = ['Life', 'is', 'too', 'short']
+# result = " ".join(a)
+# print(result)
+
+# '''doit Q8'''
+# a = 1, 2, 3
+# a = a + (4,)
+# print(a)
+
+# '''doit Q9'''
+# ''' 딕셔너리의 키값에는 변하는 값인 리스트를 집어넣을 수가 없다.'''
+
+# '''doit Q10'''
+# a = {'A':90, 'B':80, 'C':70}
+# result = a.pop('B')
+# print(a)
+# print(result)
+
+# '''doit Q11'''
+# a = [1, 1, 1, 2, 2, 3, 3, 3, 4, 4, 5]
+# aSet = set(a)
+# b = list(aSet)
+# print(b)
+
+'''doit Q12'''
+a = b = [1, 2, 3]
+a[1] = 4
+print(b)
