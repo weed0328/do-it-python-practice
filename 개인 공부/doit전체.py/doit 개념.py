@@ -60,17 +60,37 @@
 #     number = int(sys.stdin.readline())
 
 '''커피 뽑는 기계!'''
-from functools import total_ordering
+# coffee = 10
+# price = 300
+# total_price = 0
+# while price:
+#     print('300원 넣으셨군요! 믹스커피 한 잔 나갑니다.')
+#     coffee -= 1
+#     total_price = total_price + price
+#     print(f'남은 커피는 {coffee}잔 입니다.')
+#     if coffee == 0:
+#         print(f"커피가 모두 소진되었습니다.\n남은 커피{coffee}잔\n총 수익:{total_price}")
+#         break
 
-
+'''실재 자판기 처럼!!'''
+import sys
 coffee = 10
-price = 300
-total_price = 0
-while price:
-    print('300원 넣으셨군요! 믹스커피 한 잔 나갑니다.')
-    coffee -= 1
-    total_price = total_price + price
-    print(f'남은 커피는 {coffee}잔 입니다.')
+
+while True:
+    price = int(sys.stdin.readline())
     if coffee == 0:
-        print(f"커피가 모두 소진되었습니다.\n남은 커피{coffee}잔\n 총 수익:{total_price}")
         break
+    elif price == 300:
+        print("커피가 나왔습니다.")
+        coffee -= 1
+        print(f"남은 커피는{coffee}잔 입니다.")
+    elif price > 300:
+        remain = price - 300
+        print(f"커피가 나왔습니다. 거스돈은{remain}원 입니다.")
+        coffee -= 1
+        print(f"남은 커피는{coffee}잔 입니다.")
+    elif 0 <= price < 300:
+        remain2 = 300 - price
+        print(f"금액이 부족합니다. {price}원을 반환합니다.")
+    else:
+        pass
