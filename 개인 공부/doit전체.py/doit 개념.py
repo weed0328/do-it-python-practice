@@ -72,25 +72,34 @@
 #         print(f"커피가 모두 소진되었습니다.\n남은 커피{coffee}잔\n총 수익:{total_price}")
 #         break
 
-'''실재 자판기 처럼!!'''
-import sys
-coffee = 10
+# '''실재 자판기 처럼!!'''
+# import sys
+# coffee = 10
+
+# while True:
+#     price = int(sys.stdin.readline())
+#     if coffee == 0:
+#         break
+#     elif price == 300:
+#         print("커피가 나왔습니다.")
+#         coffee -= 1
+#         print(f"남은 커피는{coffee}잔 입니다.")
+#     elif price > 300:
+#         remain = price - 300
+#         print(f"커피가 나왔습니다. 거스돈은{remain}원 입니다.")
+#         coffee -= 1
+#         print(f"남은 커피는{coffee}잔 입니다.")
+#     elif 0 <= price < 300:
+#         remain2 = 300 - price
+#         print(f"금액이 부족합니다. {price}원을 반환합니다.")
+#     else:
+#         pass
+'''while문의 맨 처음으로 돌아가기'''
+# a = 0
+# while a < 10:
+#     a += 1
+#     if a % 2 == 0: continue
+#     print(a)
 
 while True:
-    price = int(sys.stdin.readline())
-    if coffee == 0:
-        break
-    elif price == 300:
-        print("커피가 나왔습니다.")
-        coffee -= 1
-        print(f"남은 커피는{coffee}잔 입니다.")
-    elif price > 300:
-        remain = price - 300
-        print(f"커피가 나왔습니다. 거스돈은{remain}원 입니다.")
-        coffee -= 1
-        print(f"남은 커피는{coffee}잔 입니다.")
-    elif 0 <= price < 300:
-        remain2 = 300 - price
-        print(f"금액이 부족합니다. {price}원을 반환합니다.")
-    else:
-        pass
+    print("dfdf")
