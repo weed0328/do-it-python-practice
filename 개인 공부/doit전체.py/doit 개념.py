@@ -150,6 +150,14 @@
 
 '''for문과 if문 여러개를 한꺼번에 사용하는 것도 가능'''
 '''구구단의 모든 결과를 한 리스트에 담고 싶을 경우'''
-result = [i*j for i in range(2, 11)
-            for j in range(1, 11)]
+# result = [i*j for i in range(2, 11)
+#             for j in range(1, 11)]
+# print(result)
+
+result = 0
+i = 1
+while i <= 1000:
+    if i % 3 == 0:
+        result += i
+        i += i
 print(result)
