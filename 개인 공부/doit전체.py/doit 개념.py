@@ -21,7 +21,7 @@
 # else:
 #     print('기어가')
 
-# '''if문 한줄로 작성하기'''
+'''if문 한줄로 작성하기'''
 # pocket = ['paper', 'cellphone', 'money']
 # if 'money' in pocket: print('돈을 꺼내라')
 # else: print('카드를 꺼내라')
@@ -37,14 +37,14 @@
 # score = 90
 # message = "success" if score >= 60 else "failure"
 
-# '''while문!!!!!!!!!!!!!!!!'''
+'''while문!!!!!!!!!!!!!!!!'''
 # treeHit = 0
 # while treeHit < 10:
 #     treeHit += 1
 #     print(f'나무를 {treeHit}번 찍었습니다.')
 #     if treeHit == 10: print("나무 넘어갑니다. 다치기 싫으면 비키세요")
 
-# '''문제 맞출때까지 문제 반복하기'''
+'''문제 맞출때까지 문제 반복하기'''
 # import sys
 # prompt = """
 # 1. Add
@@ -72,7 +72,7 @@
 #         print(f"커피가 모두 소진되었습니다.\n남은 커피{coffee}잔\n총 수익:{total_price}")
 #         break
 
-# '''실재 자판기 처럼!!'''
+'''실재 자판기 처럼!!'''
 # import sys
 # coffee = 10
 
@@ -101,5 +101,48 @@
 #     if a % 2 == 0: continue
 #     print(a)
 
-while True:
-    print("dfdf")
+'''for문 포문포문!'''
+# test_list = [(1, 2), (3, 4), (5, 6)]
+# for (first, last) in test_list: # test_list 리스트 값이 튜플이기 때문에 자동으로 first last에 대입
+#     print(first + last)
+
+'''총 다섯명의 학생이 시험을 보았는데 시험점수가 60점이넘으면 합격이고
+그렇지 않으면 불합격읻. 합격인지 불합격인지 결과를 도출하라'''
+
+# import sys
+# students = []
+# for i in range(5):
+#     a = int(sys.stdin.readline())
+#     students.append(a)
+
+# s_number = 0
+
+# for i in students:
+#     s_number += 1
+#     if i >= 60: print(f"{s_number}번 학생은 합격입니다.")
+#     else:       print(f"{s_number}번 학생은 불합격입니다. 짐 싸세요.")
+
+# students = [90, 25, 67, 45, 80]
+# s_number = 0
+
+# for i in students:
+#     s_number += 1
+#     if i < 60: continue
+#     print(f"{s_number}번 학생 축하해요 당신은 합격입니다.")
+
+# students = [90, 25, 67, 45, 80]
+
+# for a in range(len(students)):
+#     if students[a] < 60: continue
+#     print(f"{a+1}번 학생 축하합니다. 당신은 합격입니다.")
+
+"""구구단!!"""
+# for i in range(2, 10):
+#     for j in range(1, 1000):
+#         print(i*j, end=" ")
+#     print('')
+
+'''리스트 내포 사용하기'''
+a = [1,2,3,4]
+result = [num * 3 for num in a if num % 2 == 0]
+print(result)
