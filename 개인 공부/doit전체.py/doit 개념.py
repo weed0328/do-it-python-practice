@@ -143,6 +143,13 @@
 #     print('')
 
 '''리스트 내포 사용하기'''
-a = [1,2,3,4]
-result = [num * 3 for num in a if num % 2 == 0]
+# a = [1,2,3,4]
+# result = [num * 3 for num in a if num % 2 == 0]
+# print(result)
+"""기본적인 리스트 내포 문법""" '--->'  '''[항목표현식 for 항목 in 반복가능객체 if 조건]'''
+
+'''for문과 if문 여러개를 한꺼번에 사용하는 것도 가능'''
+'''구구단의 모든 결과를 한 리스트에 담고 싶을 경우'''
+result = [i*j for i in range(2, 11)
+            for j in range(1, 11)]
 print(result)
