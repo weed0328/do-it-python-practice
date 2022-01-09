@@ -13,19 +13,19 @@
 # t = plus
 # t = (20, 50)
 
-fruit = {'apple':5, 'grape': 10, 'banana': 7, 'peach':3, 'melon':2}
+# fruit = {'apple':5, 'grape': 10, 'banana': 7, 'peach':3, 'melon':2}
 
-def f1(x):           # 이런 함수를 간단하게 람다로 지정이 가능하다.
-    return x[1]
+# def f1(x):           # 이런 함수를 간단하게 람다로 지정이 가능하다.
+#     return x[1]
 
-sorted1 = sorted(fruit.items(), key = f1)   #key다음에는 반드시 함수를 입력 받아야함 #따라서 17번 행 처럼 함수 식을 따로 만들어줘서 입력 가능
-print(sorted1)
+# sorted1 = sorted(fruit.items(), key = f1)   #key다음에는 반드시 함수를 입력 받아야함 #따라서 17번 행 처럼 함수 식을 따로 만들어줘서 입력 가능
+# print(sorted1)
 
-sorted1 = sorted(fruit.items(), key=lambda x:x[0])    #람다를 활용하면 함수를 따로 지정하지 않고 정렬가능하다.
-sorted2 = sorted(fruit.items(), key=lambda x:x[1])    #람다를 사용하면 코드가 간편해짐!
+# sorted1 = sorted(fruit.items(), key=lambda x:x[0])    #람다를 활용하면 함수를 따로 지정하지 않고 정렬가능하다.
+# sorted2 = sorted(fruit.items(), key=lambda x:x[1])    #람다를 사용하면 코드가 간편해짐!
 
-print(sorted1)
-print(sorted2)
+# print(sorted1)
+# print(sorted2)
 
 """key가 없어도 람다 사용이 가능하다. 람다와 조건부 표현식 사용법"""
 '''lambda 매개변수들(요소): 식1(최종적으로 하고자하는 식)(이러해라) if 조건식(이렇다면) else 식2, 리스트'''

@@ -115,3 +115,53 @@
 # numbers = [1, 2, 3, 4, 5]
 # result = [n*2 for n in numbers if n % 2 == 1]
 # print(result)
+
+'''4장 연습문제'''
+'Q1'
+from os import replace
+
+
+def is_odd(number):
+    if number % 2 == 1: return True
+    else: return False
+result = is_odd(3)
+print(result)
+
+'Q1 lambda 함수 이용하기'
+# lol = lambda x : True if x % 2 == 1 else False
+# lol(6) 
+
+'Q2'
+# import sys
+# def avg_numbers(*args):
+#     result = 0 
+#     for i in args:
+#         result += i
+#     return print(result / len(args))
+
+# avg_numbers(1, 2, 3, 4, 5)
+
+'Q3'
+# input1 = int(input("첫 번째 숫자를 입력하세요"))
+# input2 = int(input("두 번째 숫자를 입력하세요"))
+
+# total = input1 + input2
+# print(f"두 수의 합은 {total}입니다.")
+
+'Q6'
+# user_input = input("저장할 내용을 입력하세요")
+# f = open('test.txt', 'a')
+# f.write(user_input)
+# f.write("\n")
+# f.close()
+
+'Q7'
+# f = open('test.txt', 'r')
+# body = f.read()
+# f.close()
+
+# body = body.replace('java', 'Python')
+
+# f = open('test.txt', 'w')
+# f.write(body)
+# f.close()

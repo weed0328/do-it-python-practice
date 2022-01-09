@@ -154,10 +154,4 @@
 #             for j in range(1, 11)]
 # print(result)
 
-result = 0
-i = 1
-while i <= 1000:
-    if i % 3 == 0:
-        result += i
-        i += i
-print(result)
+  
