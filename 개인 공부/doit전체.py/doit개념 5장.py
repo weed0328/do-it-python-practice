@@ -1,7 +1,6 @@
 """파이썬에 날개달기 클래스"""
 '''기본적인 덧셈 계산기 함수'''
-
-result = 0
+# result = 0
 # def add(num):
 #     global result  #global로 밖의 result를 가져와 result값을 계속 갱신한다.
 #     result += num
@@ -98,33 +97,33 @@ result = 0
 # a.add()
 
 '''때문에 객체의 초깃값을 설정해야하는 경우에는 생성자를 구현!!(보다 안전)'''
-class FourCal:
-    def __init__(self, first, second): # __init__ 생성자 메서드를 의미
-        self.first = first             # __init__ 메서드는 setdata와 이름만 다르고 전부 동일 다만 생성자로 인식되어
-        self.second = second           # 객체가 생성되는 시점에 자동으로 호출
+# class FourCal:
+#     def __init__(self, first, second): # __init__ 생성자 메서드를 의미
+#         self.first = first             # __init__ 메서드는 setdata와 이름만 다르고 전부 동일 다만 생성자로 인식되어
+#         self.second = second           # 객체가 생성되는 시점에 자동으로 호출
     
-    def setdata(self, first, second):
-        self.first = first
-        self.second = second
+#     def setdata(self, first, second):
+#         self.first = first
+#         self.second = second
     
-    def add(self):
-        result = self.first + self.second
-        return result
+#     def add(self):
+#         result = self.first + self.second
+#         return result
     
-    def mul(self):
-        result = self.first * self.second
-        return result
+#     def mul(self):
+#         result = self.first * self.second
+#         return result
     
-    def sub(self):
-        result = self.first - self.second
-        return result
+#     def sub(self):
+#         result = self.first - self.second
+#         return result
     
-    def div(self):
-        result = self.first / self.second
-        return result
+#     def div(self):
+#         result = self.first / self.second
+#         return result
 
-a = FourCal(4, 2)  # self = 생성되는 객체 a / first = 4 / second = 2
-print(a.mul())     # <= 제대로 작동하는 것을 볼 수 있음
+# a = FourCal(4, 2)  # self = 생성되는 객체 a / first = 4 / second = 2
+# print(a.mul())     # <= 제대로 작동하는 것을 볼 수 있음
 
 """클래스의 상속"""   '''상속이란 말 그대로 물려받는 것 클래스의 기능을 그대로 가져온다 생각'''
 # class MoreFourCal(FourCal): # 이제  MoreFourCal 클래스는 FourCal의 모든 기능을 사용할 수 있다.
@@ -132,42 +131,94 @@ print(a.mul())     # <= 제대로 작동하는 것을 볼 수 있음
 # b = MoreFourCal(4, 2)
 # print(b.sub()) # 2 출력
 
-class MoreFourCal(FourCal):
-    def pow(self):
-        result = self.first ** self.second
-        return result
+# class MoreFourCal(FourCal):
+#     def pow(self):
+#         result = self.first ** self.second
+#         return result
 
-a = MoreFourCal(4, 2)
-print(a.pow())
+# a = MoreFourCal(4, 2)
+# print(a.pow())
 
 '''메서드 오버라이딩(덮어쓰기)''' '''기존 클래스를 수정할때 사용'''
-class SafeFoulCal(FourCal):                   # 메소드 상속을 받은 후
-    def div(self):                            # 기존의 나눗셈 메서드를 입력
-        if self.second == 0: return 0         # 원하는 방향으로 수정
-        else: return self.first / self.second
+# class SafeFoulCal(FourCal):                   # 메소드 상속을 받은 후
+#     def div(self):                            # 기존의 나눗셈 메서드를 입력
+#         if self.second == 0: return 0         # 원하는 방향으로 수정
+#         else: return self.first / self.second
 
-a = SafeFoulCal(4, 0)
-print(a.div())  #출력 0
+# a = SafeFoulCal(4, 0)
+# print(a.div())  #출력 0
 
 """클래스 변수""" '''클래스 변수는 객체 변수와 달리 클래스로 만든 모든 객체에 적용된다. a, b로 나눈다고 독립 X'''
-class Family:  
-    lastname = "김"  #클래스 변수
+# class Family:  
+#     lastname = "김"  #클래스 변수
 
-print(Family.lastname)
+# print(Family.lastname)
 
-a = Family()
-b = Family()
-print(a.lastname) # "김"출력
-print(b.lastname) # "김"출력
+# a = Family()
+# b = Family()
+# print(a.lastname) # "김"출력
+# print(b.lastname) # "김"출력
 
-Family.lastname = "박"    # <-- 클래스 변수를 바꿨더니, a와 b가 둘 다 바뀜
-print(a.lastname) # "박" 출력
-print(b.lastname) # "박" 출력
+# Family.lastname = "박"    # <-- 클래스 변수를 바꿨더니, a와 b가 둘 다 바뀜
+# print(a.lastname) # "박" 출력
+# print(b.lastname) # "박" 출력
 
 """>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>5-2 모듈<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"""
 '''모듈이란? 함수나 변수 또는 클래스를 모아놓은 파일 즉, 파이썬 파일'''   # 확장자 '.py' 붙은 파일은 전부 모듈이라 보면 된다. 
 
-'''모듈 만들기'''
-import mod1
-print(mod1.add(3, 4))
+'''모듈 불러오기''' '''모듈을 불러올떄는 같은 디렉토리 안에 있는걸 불러올 수 있다.'''
+# import mod1
+# print(mod1.add(3, 4))
 
+# from mod1 import add
+# print(add(5, 6))
+
+# from mod1 import*  #'''<-- *를 붙이면 mod1의 모든 함수를 사용하겠다는 의미'''
+# print(add(5, 6))
+
+'''if __name__ == "__main__":의 의미'''
+'''__name__변수란?'''
+'''파이썬이 내부적으로 사용하는 특수한 변수의 이름으로 직접 파일을 실했을때는 __name__ == "__main__"이 참이 되어 실행이 되지만
+다른 셀이나 모듈에서 import할 경우에는 거짓이 되어 if 다음문장이 실행되지 않는다.'''
+# import mod1
+
+"""클래스나 변수등을 포함한 모듈"""
+#mod2 <-- class를 포함한 모듈
+# import mod2
+# print(mod2.PI)
+
+# a = mod2.Math()
+# print(a.solv(2))
+
+"""패키지"""
+# from game.sound import*
+# echo.echo_test()
+
+"""5-4 예외처리""" #클래스 죽이고 싶다...ㅠ 
+'''오류 예외 처리기법'''
+
+'''try, exept문'''
+
+# # try:
+# #     4/0
+# # except ZeroDivisionError as e: 
+# #     print(e)
+
+# try:
+#     a = [1, 2]
+#     print(a[3])
+# except IndexError:
+#     print("인덱싱할 수 없습니다.")
+
+# try:
+#     a = [1, 2]
+#     print(a[3])
+#     4/0
+# except (ZeroDivisionError, IndexError) as e: 
+#     print(e)
+
+'''오류 회피하기'''
+try:
+    f = open("나없는 파일", 'r')
+except FileNotFoundError:
+    pass
