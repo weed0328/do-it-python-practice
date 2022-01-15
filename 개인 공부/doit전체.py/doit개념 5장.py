@@ -214,11 +214,60 @@
 #     a = [1, 2]
 #     print(a[3])
 #     4/0
-# except (ZeroDivisionError, IndexError) as e: 
+# except (ZeroDivisionError, IndexError) as e: #<-- 이렇게 합칠 수 있음
 #     print(e)
 
 '''오류 회피하기'''
-try:
-    f = open("나없는 파일", 'r')
-except FileNotFoundError:
+# try:
+#     f = open("나없는 파일", 'r')
+# except FileNotFoundError:
+    # pass
+
+'''오류 일부러 발생시키기'''
+# class Bird:
+#     def fly(self): 
+#         raise NotImplementedError   #반드시 fly함수를 구현하겠다는 의지 구현 안하면 어림도 없지 바로 오류
+
+# class Eagle(Bird): #<-- Bird 상속받음
+#     pass           # 구현 안했음으로 오류
+
+# eagle = Eagle()
+# print(eagle.fly())
+
+# class Bird:
+#     def fly(self): 
+#         raise NotImplementedError   #반드시 fly함수를 구현하겠다는 의지 구현 안하면 어림도 없지 바로 오류
+'''위와 같이 raise함수를 이용하여 예외를 일부러 발생기킬 수 있다.'''
+# class Eagle(Bird): #<-- Bird 상속받음
+#     def fly(self):            # 구현함!
+#         print("very fast")           
+
+# eagle = Eagle()
+# eagle.fly()
+
+'''예외 만들기'''
+class MyError(Exception):
     pass
+
+def say_nick(nick):
+    if nick =='바보':
+#         raise MyError()     # 닉네임이 바보면 오류를 일으킬 것
+#     print(nick)
+
+# try:
+#     say_nick("천사")        
+#     say_nick("바보")
+# except:
+#     print("허용되지 않는 별명입니다.")  # 오류대신 당므과 같은 문장을 출력할 것
+
+#다음과 같은 방법도 있다.
+
+try:
+    say_nick("천사")        
+    say_nick("바보")
+except MyError as e:         #이거 그대로 출력하면 오류난다 따라서 밑에있는 __str__메서드를 구현해야함
+    print(e)
+
+# class Myerror(Exception):
+#     def __str__(self):
+#         return "허용되지 않는 별명입니다."
