@@ -246,19 +246,19 @@
 # eagle.fly()
 
 '''예외 만들기'''
-class MyError(Exception):
-    pass
+# # class MyError(Exception):
+#     pass
 
 def say_nick(nick):
     if nick =='바보':
-#         raise MyError()     # 닉네임이 바보면 오류를 일으킬 것
-#     print(nick)
+        raise MyError()     # 닉네임이 바보면 오류를 일으킬 것
+    print(nick)
 
-# try:
-#     say_nick("천사")        
-#     say_nick("바보")
-# except:
-#     print("허용되지 않는 별명입니다.")  # 오류대신 당므과 같은 문장을 출력할 것
+try:
+    say_nick("천사")        
+    say_nick("바보")
+except:
+    print("허용되지 않는 별명입니다.")  # 오류대신 당므과 같은 문장을 출력할 것
 
 #다음과 같은 방법도 있다.
 
@@ -268,6 +268,7 @@ try:
 except MyError as e:         #이거 그대로 출력하면 오류난다 따라서 밑에있는 __str__메서드를 구현해야함
     print(e)
 
-# class Myerror(Exception):
-#     def __str__(self):
-#         return "허용되지 않는 별명입니다."
+class MyError(Exception):
+    def __str__(self):  #__str__메서드는 print(e)처럼 오류 메시지를 print문으로 출력할 경우에 호출되는 메세지이다.
+        return "허용되지 않는 별명입니다."
+

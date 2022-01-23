@@ -86,7 +86,7 @@ if __name__ =="__main__":
 
 
 def random_popp(data):
-    number = random.choice(data)   #unmber.choice를 사용하면 입력받은 리스트에서 무작위로 하나를 선택하여 돌려줌
+    number = random.choice(data)   #random.choice를 사용하면 입력받은 리스트에서 무작위로 하나를 선택하여 돌려줌
     data.remove(number)
     return number
 
@@ -97,4 +97,4 @@ print(data)
 
 """webbrowser"""
 import webbrowser
-webbrowser.open("http://google.com")
+webbrowser.open("http://google.com") 
